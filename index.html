@@ -1,73 +1,157 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ももいろクローバーZ</title>
     <style>
-        .momota{color:rgb(224, 70, 4);}
-        .sayaka{color:rgb(239, 60, 138);}
-        .shiori{color:rgb(231, 231, 16);}
-        .reni{font-weight:bold; color:rgb(229, 8, 240);}
-        @media (min-width: 600px) {
-          #target {
-              position: relative;
-              overflow: hidden;
-              z-index: 0;
-          }
-          #target:before {
-              background-attachment: fixed;
-              content: '';
-              background-image: url('ecd5070f0d425d15021fdcaecbc32fb7.jpg');
-              position: absolute;
-              top: -3px;
-              bottom: -3px;
-              left: -3px;
-              right: -3px;
-              filter: blur(3px);
-              z-index: -1;
-          }
-        }
 
-        @media (min-width: 800px) {
-          #target {
-              position: relative;
-              overflow: hidden;
-              z-index: 0;
-          }
-          #target:before {
-              background-attachment: fixed;
-              content: '';
-              background-image: url('Profile_PCimage-scaled.jpg');
-              position: absolute;
-              top: -3px;
-              bottom: -3px;
-              left: -3px;
-              right: -3px;
-              filter: blur(3px);
-              z-index: -1;
-          }
-        }
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
+    <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', function(){
+        new ScrollHint('.js-scrollable');
+      });
+    </script>
   </head>
   <body>
     <div id="target">
-      <h1>ももいろクローバーZ</h1>
-      <li class="momota">百田夏菜子</li>
-      <img src="momota.jpeg">
-      <li class="sayaka">佐々木彩夏</li>
-      <img src="sayaka.jpeg">
-      <li class="shiori">玉井詩織</li>
-      <img src="shiori.jpeg">
-      <li class="reni">高城れに</li>
-      <img src="reni.jpeg">
-      <li>
-      <a href="oshi2.html">卒業したメンバーはこちら</a>
-      </li>
+      <h1 class="hachi-maru-pop-regular title">ももいろクローバーZ</h1>
+      <h2 class="subtitle hachi-maru-pop-regular title">目次</h2>
+        <ul class="mokuji">
+          <li><a href="#member">メンバー</a></li>
+          <li><a href="#like">あなたは誰が好き</a></li>
+          <li><a href="#discography">歴代シングル</a></li>
+        </ul>
+        <time datetime="2025-01-18">更新日 2025/01/18</time>
+      
+        <div class="tmb">
+          <label for="pop-01">
+            <img src="momota.jpeg" alt="image_01" class="tmb_img">
+          </label>
+          <input type="checkbox" value="" id="pop-01">
+          <div class="popup">
+            <label for="pop-01" class="popup__btn"></label>
+            <label for="pop-01" class="popup__btnarea"></label>
+            <div class="popup__img">
+              <img src="momota.jpeg" alt="image_01">
+            </div>
+          </div>
+        </div>
+        <div class="tmb">
+          <label for="pop-02">
+            <img src="sayaka.jpeg" alt="image_02" class="tmb_img">
+          </label>
+          <input type="checkbox" value="" id="pop-02">
+          <div class="popup">
+            <label for="pop-02" class="popup__btn"></label>
+            <label for="pop-02" class="popup__btnarea"></label>
+            <div class="popup__img">
+              <img src="sayaka.jpeg" alt="image_02">
+            </div>
+          </div>
+        </div>
+
+
+      <div class="container" id="member">
+          <div class="item">
+            <p class="momota">百田夏菜子
+            <img src="momota.jpeg"></p>
+          </div>
+          <div class="item">
+            <p class="sayaka">佐々木彩夏
+              <img src="sayaka.jpeg"></p>
+          </div>
+          <div class="item">
+          <p class="shiori">玉井詩織
+            <img src="shiori.jpeg"></p>
+          </div>
+          <div class="item">
+            <p class="reni">高城れに
+            <img src="reni.jpeg"></p>
+          </div>
+      </div>
+      卒業したメンバーは<a href="oshi2.html">こちら</a>
     </div>
-    <div>あなたは誰が好き？
-      <input type="radio" id="momota" name="drone" value="momota"><label for="momota">百田夏菜子</label>
-      <input type="radio" id="sayaka" name="drone" value="sayaka"><label for="sayaka">佐々木彩夏</label>
-      <input type="radio" id="shiori" name="drone" value="shiori"><label for="shiori">玉井詩織</label>
-      <input type="radio" id="reni" name="drone" value="reni"><label for="reni">高城れに</label>
+    <div id="like">あなたは誰が好き？
+      <input type="radio" id="momota" name="drone" value="momota"><label for="momota" class="momota">百田夏菜子</label>
+      <input type="radio" id="sayaka" name="drone" value="sayaka"><label for="sayaka" class="sayaka">佐々木彩夏</label>
+      <input type="radio" id="shiori" name="drone" value="shiori"><label for="shiori" class="shiori">玉井詩織</label>
+      <input type="radio" id="reni" name="drone" value="reni"><label for="reni" class="reni">高城れに</label>
+    </div>
+    <h2 class="subtitle hachi-maru-pop-regular title">おすすめプレイリスト</h2>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO2klEFu?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <div class="js-scrollable entry-container">
+    <h2 class="subtitle hachi-maru-pop-regular title" id="discography">歴代シングル</h2>
+        <table class="dataframe discography-table">
+            <thead>
+                <tr>
+                    <th>発売年</th>
+                    <th>タイトル</th>
+                    <th>売上枚数</th>
+                    <th>おすすめ度</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2009年</td>
+                    <td>ももいろパンチ<br>未来へススメ!</td>
+                    <td>1万2612枚<br>2万2324枚</td>
+                    <td><span class="star5_rating" data-rate="3.5"></span></span><br><span class="star5_rating" data-rate="3"></span></td>
+                </tr>
+                <tr>
+                    <td>2010年</td>
+                    <td>行くぜっ!怪盗少女<br>ピンキージョーンズ</td>
+                    <td>6万4761枚<br>3万9868枚</td>
+                    <td><span class="star5_rating" data-rate="4.5"></span><br><span class="star5_rating" data-rate="2.5"></span></td>
+                </tr>
+                <tr>
+                    <td>2011年</td>
+                    <td>ミライボウル<br>Z伝説～終わりなき改革～<br>D’の純情<br>労働讃歌</td>
+                    <td>4万6671枚<br>2万1313枚<br>1万8666枚<br>6万8029枚</td>
+                    <td><span class="star5_rating" data-rate="2"></span><br><span class="star5_rating" data-rate="4.5"></span><br><span class="star5_rating" data-rate="3"></span><br><span class="star5_rating" data-rate="3.5"></span></td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+        <h2>歴代シングル</h2>
+        <table class="  ">
+            <thead>
+                <tr>
+                    <th>発売年</th>
+                    <th>タイトル</th>
+                    <th>売上枚数</th>
+                    <th>おすすめ度</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>2009年</th>
+                    <td data-label="タイトル">ももいろパンチ<br>未来へススメ!</td>
+                    <td data-label="売上枚数">1万2612枚<br>2万2324枚</td>
+                    <td data-label="おすすめ度"><span class="star5_rating" data-rate="3.5"></span></span><br><span class="star5_rating" data-rate="3"></span></td>
+                </tr>
+                <tr>
+                    <th>2010年</th>
+                    <td data-label="タイトル">行くぜっ!怪盗少女<br>ピンキージョーンズ</td>
+                    <td data-label="売上枚数">6万4761枚<br>3万9868枚</td>
+                    <td data-label="おすすめ度"><span class="star5_rating" data-rate="4.5"></span><br><span class="star5_rating" data-rate="2.5"></span></td>
+                </tr>
+                <tr>
+                    <th>2011年</th>
+                    <td data-label="タイトル">ミライボウル<br>Z伝説～終わりなき改革～<br>D’の純情<br>労働讃歌</td>
+                    <td data-label="売上枚数">4万6671枚<br>2万1313枚<br>1万8666枚<br>6万8029枚</td>
+                    <td data-label="おすすめ度"><span class="star5_rating" data-rate="2"></span><br><span class="star5_rating" data-rate="4.5"></span><br><span class="star5_rating" data-rate="3"></span><br><span class="star5_rating" data-rate="3.5"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        
   </body>
 </html>

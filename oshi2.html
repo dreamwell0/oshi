@@ -5,6 +5,58 @@
     <title>ももいろクローバーZ 卒業メンバー</title>
     <style>
         .momoka{color:rgb(65, 139, 73);}
+        .table_design08 {
+          border-collapse: collapse;
+          table-layout: fixed;
+          width: 100%;
+          max-width: 700px;
+          text-align: center;
+        }
+        .table_design08 th, .table_design08 td {
+          border: 2px solid #d2e8f1;
+          padding: 1em;
+        }
+        .table_design08 thead th {
+          background-color: #4d9bc1;
+          color: #fff;
+          border: 2px solid #4d9bc1;
+          border-right: 2px solid #fff;
+          border-bottom: 2px solid #fff;
+        }
+        .table_design08 thead th:last-of-type {
+          border-right: 2px solid #4d9bc1;
+        }
+        .table_design08 tbody th {
+          color: #4d9bc1;
+          font-weight: bold;
+          text-align: center;
+        }
+        @media screen and (max-width: 787px) {
+          .table_design08 {
+            text-align: left;
+          }
+          .table_design08 thead {
+            display:none;
+          }
+          .table_design08 th, .table_design08 td {
+            display: block;
+            border: 0;
+            border-bottom: 2px solid #e6f1f6;
+          }
+          .table_design08 tbody th{
+            background: #4d9bc1;
+            color:#fff;
+          }
+          .table_design08 td::before{
+            content: attr(data-label);
+            color: #4d9bc1;
+            font-weight: bold;
+            display: inline-block;
+            width: 20%;
+            min-width: 4em;
+          }
+        }
+          
     </style>
   </head>
   <body>
@@ -14,5 +66,31 @@
     <li>
         <a href="index.html">現役メンバーはこちら</a>
     </li>
+    <table class="table_design08">
+      <thead>
+        <tr>
+          <th>支社名</th>
+          <th>所在地</th>
+          <th>社員数</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>A支社</th>
+          <td data-label="所在地">東京都</td>
+          <td data-label="社員数">150人</td>
+        </tr>
+        <tr>
+          <th>B支社</th>
+          <td data-label="所在地">大阪府</td>
+          <td data-label="社員数">30人</td>
+        </tr>
+        <tr>
+          <th>C支社</th>
+          <td data-label="所在地">沖縄県</td>
+          <td data-label="社員数">50人</td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>
